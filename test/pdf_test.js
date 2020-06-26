@@ -311,10 +311,6 @@ describe('PDF converter', function () {
         }
         const inputFile = `${__dirname}/fixtures/${inputFileName}`
 
-        /*
-        const execSync = require('child_process').execSync
-        execSync(`/home/guillaume/.rvm/gems/ruby-2.3.0/bin/asciidoctor-pdf ${cliArgs} ${inputFile} -o ${outputFile}`)
-        */
         const pdfDoc = await convert(inputFile, outputFile, options)
         expect(pdfDoc.getPages().length).to.equal(scenario['expected-page-number'])
         expect(outputFile).to.be.visuallyIdentical(outputFileName)

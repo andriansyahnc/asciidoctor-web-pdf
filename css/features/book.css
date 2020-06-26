@@ -1,10 +1,8 @@
 #toc {
-  break-before: page;
   page: tableofcontents;
 }
 
 #preamble {
-  break-before: page;
   page: preamble;
 }
 
